@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'g++ -o myprog new.cpp'
-                sh 'build 'PES1UG20CS225-1''
+                sh 'build 'curl -I -u admin:admin http://localhost:8080/job/PES1UG20CS225-1/build\?token\=1100c4a3a1d30486169e06dedb17b09d49'
                 echo 'Build Stage Successful'
             }
         }
