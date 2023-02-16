@@ -1,2 +1,2 @@
 new_exec: new.cpp
-	g++ hello.cpp -o new_exec
+	g++ new.cpp -o new_exec
