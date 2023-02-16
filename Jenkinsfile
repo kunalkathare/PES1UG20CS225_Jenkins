@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'make -C New_c++'
+                sh 'make -C main'
                 echo 'Build Stage Successful'
             }
         }
         stage('Test') {
             steps {
-                sh '/var/jenkins_home/workspace/PES1UG20CS225-1/New_c++/new_exec'
+                sh '/var/jenkins_home/workspace/PES1UG20CS225-1/main/hello_exec'
                 echo 'Test Stage Successful'
             }
         }
