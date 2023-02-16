@@ -3,20 +3,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o myprog new.cpp'
-                sh 'build curl -I -u admin:admin http://localhost:8080/job/PES1UG20CS225-1/build\?token\=1100c4a3a1d30486169e06dedb17b09d49'
+                sh 'make -C New_c++'
                 echo 'Build Stage Successful'
             }
         }
         stage('Test') {
             steps {
-                sh './myprog'
+                sh '/var/jenkins_home/workspace/PES1UG20CS225-1/New_c++/new_exec'
                 echo 'Test Stage Successful'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deployment Stage Successful'
+                echo 'Deploy Stage Successful'
             }
         }
     }
