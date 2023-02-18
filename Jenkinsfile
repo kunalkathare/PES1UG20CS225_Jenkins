@@ -17,6 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploy Stage Successful'
+                sh 'cat Keerthana.txt' -> use for showing error
             }
         }
     }
